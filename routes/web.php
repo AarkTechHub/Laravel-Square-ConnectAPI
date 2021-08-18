@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/square-Test', "SquarePaymentController@index_squarepayment");
+Route::post("/processSquare","SquarePaymentController@process_squarepayment")->name('ajaxprocess.post');
